@@ -193,6 +193,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-connect-proxy');
   grunt.loadNpmTasks('grunt-open');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.registerTask('build', ['html2js','cssmin','useminPrepare','concat','copy','usemin','copy:publish']);
   grunt.registerTask('default', ['html2js','cssmin','useminPrepare','concat','copy','usemin','copy:publish','serve']);
   grunt.registerTask('publish', ['copy']);
   grunt.registerTask('serve', function (target) {
